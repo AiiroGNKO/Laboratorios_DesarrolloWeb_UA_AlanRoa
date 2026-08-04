@@ -1,9 +1,9 @@
 body{
-    background: #ebb9ff;
+    background: #7a767e;
 }
 
 header{
-    background: #df8fff;
+    background: #48424e;
     color:white;
     padding:20px;
 }
@@ -18,4 +18,26 @@ header{
 .menu li a{
     color:white;
     text-decoration:none;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea{
+    padding: 10px;
+}
+
+button{
+    padding:10px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
 }
