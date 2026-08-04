@@ -1,0 +1,21 @@
+body{
+    background: #ebb9ff;
+}
+
+header{
+    background: #df8fff;
+    color:white;
+    padding:20px;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    list-style:none;
+}
+
+.menu li a{
+    color:white;
+    text-decoration:none;
+}
