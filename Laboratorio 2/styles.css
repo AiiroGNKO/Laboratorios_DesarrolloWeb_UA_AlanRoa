@@ -1,0 +1,165 @@
+/*comentado porque me pierdo*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #7a767e;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header y Menú en tablet (Apilado) */
+header {
+    background: #48424e;
+    color: white;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estructura principal en tablet */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Tarjetas en tablet (1 columna vertical) */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario de contacto en tablet (Vertical) */
+#contacto, .contacto {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #48424e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+footer {
+    background: #48424e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* 
+   2. TABLET (min-width: 768px) - Diseños en fila
+ */
+@media (min-width: 768px) {
+    /* Menú horizontal */
+    .menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    /* Tarjetas en 3 columnas en una misma fila */
+    .row {
+        flex-direction: row;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    /* Formulario horizontal alineado */
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    input, textarea {
+        width: 160px;
+    }
+
+    textarea {
+        height: 38px;
+        min-height: 38px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+
+/*3. ESCRITORIO (min-width: 1024px) - Maquetación Grid Global*/
+@media (min-width: 1024px) {
+    /* Activación de CSS Grid para toda la página */
+    .main-container {
+        display: grid;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        grid-template-areas: 
+            "hero" 
+            "servicios" 
+            "contacto"; 
+    }
+
+    .hero { grid-area: hero; }
+    .caracteristicas { grid-area: servicios; }
+    .contacto { grid-area: contacto; }
+
+    #contacto, .contacto {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
